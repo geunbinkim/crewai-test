@@ -1,0 +1,275 @@
+Defaulted container "buildkit-client" out of: buildkit-client, helper (init)
+=== Using BuildKit daemon at: tcp://crewai-buildkit.default:1234 ===
+=== Setting up Docker config ===
+=== Testing BuildKit daemon connection ===
+ID				PLATFORMS
+qxshovnfed38717co1mxcrprt	linux/amd64,linux/amd64/v2,linux/amd64/v3,linux/amd64/v4,linux/386
+=== Starting build process with cluster BuildKit ===
+Building image: acraz01devmagmacrewaipoc01.azurecr.io/crewai-enterprise:crewai-test-8afc9d12-7920-4081-aa2e-6f6f15f21ef9-13
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 1.10kB done
+#1 DONE 0.0s
+
+#2 [auth] crewai/python-base:pull token for acraz01devmagmacrewaipoc01.azurecr.io
+#2 DONE 0.0s
+
+#3 [internal] load metadata for acraz01devmagmacrewaipoc01.azurecr.io/crewai/python-base:latest
+#3 DONE 0.2s
+
+#4 [internal] load .dockerignore
+#4 transferring context: 2B done
+#4 DONE 0.0s
+
+#5 [stage-0 1/4] FROM acraz01devmagmacrewaipoc01.azurecr.io/crewai/python-base:latest@sha256:999472ebf72d3e2f32d3e39232ff841adbd7509ea9bc0f434b4abd39bc0ac5bb
+#5 resolve acraz01devmagmacrewaipoc01.azurecr.io/crewai/python-base:latest@sha256:999472ebf72d3e2f32d3e39232ff841adbd7509ea9bc0f434b4abd39bc0ac5bb 0.0s done
+#5 DONE 0.0s
+
+#6 [internal] load build context
+#6 transferring context: 734.36kB 0.0s done
+#6 DONE 0.0s
+
+#7 [stage-0 2/4] WORKDIR /crew
+#7 CACHED
+
+#8 [stage-0 3/4] COPY . /crew
+#8 DONE 0.1s
+
+#9 [stage-0 4/4] RUN --mount=type=secret,id=UV_DEFAULT_INDEX     export UV_DEFAULT_INDEX=$(cat /run/secrets/UV_DEFAULT_INDEX 2>/dev/null || echo "")     && uv sync && uv add crewai-enterprise api
+#9 0.224 Using CPython 3.12.12
+#9 0.224 Creating virtual environment at: .venv
+#9 0.235 Resolving despite existing lockfile due to change in pre-release mode: `allow` vs. `if-necessary-or-explicit`
+#9 5.028 Resolved 154 packages in 4.79s
+#9 5.070    Building my-first-crew @ file:///crew
+#9 5.177 Downloading tokenizers (2.9MiB)
+#9 5.187 Downloading numpy (15.8MiB)
+#9 5.187 Downloading uv (21.7MiB)
+#9 5.187 Downloading lancedb (45.0MiB)
+#9 5.192 Downloading grpcio (6.4MiB)
+#9 5.193 Downloading kubernetes (1.9MiB)
+#9 5.201 Downloading chromadb (19.0MiB)
+#9 5.211 Downloading onnxruntime (16.3MiB)
+#9 5.251 Downloading aiohttp (1.7MiB)
+#9 5.265 Downloading pyarrow (45.4MiB)
+#9 5.336 Downloading pygments (1.2MiB)
+#9 5.396 Downloading pillow (6.7MiB)
+#9 5.397 Downloading pypdfium2 (2.9MiB)
+#9 5.397 Downloading pymupdf (23.0MiB)
+#9 5.397 Downloading tiktoken (1.1MiB)
+#9 5.398 Downloading pydantic-core (1.9MiB)
+#9 5.407 Downloading pdfminer-six (6.3MiB)
+#9 5.512 Downloading sympy (6.0MiB)
+#9 5.554  Downloading aiohttp
+#9 5.557 Downloading uvloop (4.2MiB)
+#9 5.581 Downloading virtualenv (5.7MiB)
+#9 5.629 Downloading cryptography (4.3MiB)
+#9 5.639 Downloading hf-xet (3.2MiB)
+#9 5.733 Downloading lxml (5.0MiB)
+#9 5.737  Downloading pydantic-core
+#9 5.744  Downloading pygments
+#9 6.139  Downloading tiktoken
+#9 6.217  Downloading hf-xet
+#9 6.473  Downloading kubernetes
+#9 6.491  Downloading pypdfium2
+#9 6.530  Downloading virtualenv
+#9 6.532  Downloading uvloop
+#9 6.570  Downloading tokenizers
+#9 6.652  Downloading cryptography
+#9 6.669  Downloading pdfminer-six
+#9 6.758  Downloading sympy
+#9 6.768  Downloading lxml
+#9 6.920  Downloading pillow
+#9 7.138       Built my-first-crew @ file:///crew
+#9 7.671  Downloading uv
+#9 7.724  Downloading chromadb
+#9 7.808  Downloading numpy
+#9 7.832  Downloading pymupdf
+#9 8.097  Downloading grpcio
+#9 8.132  Downloading onnxruntime
+#9 8.328  Downloading lancedb
+#9 8.423  Downloading pyarrow
+#9 8.423 Prepared 149 packages in 3.37s
+#9 8.517 Installed 149 packages in 94ms
+#9 8.518  + aiohappyeyeballs==2.6.1
+#9 8.518  + aiohttp==3.13.3
+#9 8.518  + aiosignal==1.4.0
+#9 8.518  + aiosqlite==0.21.0
+#9 8.518  + annotated-doc==0.0.4
+#9 8.518  + annotated-types==0.7.0
+#9 8.518  + anyio==4.12.1
+#9 8.518  + appdirs==1.4.4
+#9 8.518  + attrs==25.4.0
+#9 8.518  + backoff==2.2.1
+#9 8.518  + bcrypt==5.0.0
+#9 8.518  + beautifulsoup4==4.13.5
+#9 8.518  + build==1.4.0
+#9 8.518  + certifi==2026.1.4
+#9 8.518  + cffi==2.0.0
+#9 8.518  + cfgv==3.5.0
+#9 8.518  + charset-normalizer==3.4.4
+#9 8.518  + chromadb==1.1.1
+#9 8.518  + click==8.1.8
+#9 8.518  + crewai==1.10.1b1
+#9 8.518  + crewai-tools==1.10.1b1
+#9 8.518  + cryptography==46.0.5
+#9 8.518  + defusedxml==0.7.1
+#9 8.518  + deprecation==2.1.0
+#9 8.518  + diskcache==5.6.3
+#9 8.518  + distlib==0.4.0
+#9 8.518  + distro==1.9.0
+#9 8.518  + docker==7.1.0
+#9 8.518  + docstring-parser==0.17.0
+#9 8.518  + durationpy==0.10
+#9 8.518  + et-xmlfile==2.0.0
+#9 8.518  + filelock==3.20.3
+#9 8.518  + flatbuffers==25.12.19
+#9 8.518  + frozenlist==1.8.0
+#9 8.518  + fsspec==2026.2.0
+#9 8.518  + googleapis-common-protos==1.72.0
+#9 8.518  + grpcio==1.78.0
+#9 8.518  + h11==0.16.0
+#9 8.518  + hf-xet==1.2.0
+#9 8.518  + httpcore==1.0.9
+#9 8.518  + httptools==0.7.1
+#9 8.519  + httpx==0.28.1
+#9 8.519  + httpx-sse==0.4.3
+#9 8.519  + huggingface-hub==0.36.2
+#9 8.519  + identify==2.6.16
+#9 8.519  + idna==3.11
+#9 8.519  + importlib-metadata==8.7.1
+#9 8.519  + importlib-resources==6.5.2
+#9 8.519  + instructor==1.12.0
+#9 8.519  + jinja2==3.1.6
+#9 8.519  + jiter==0.10.0
+#9 8.519  + json-repair==0.25.2
+#9 8.519  + json5==0.10.0
+#9 8.519  + jsonref==1.1.0
+#9 8.519  + jsonschema==4.26.0
+#9 8.519  + jsonschema-specifications==2025.9.1
+#9 8.519  + kubernetes==35.0.0
+#9 8.519  + lance-namespace==0.5.2
+#9 8.519  + lance-namespace-urllib3-client==0.5.2
+#9 8.519  + lancedb==0.29.2
+#9 8.519  + linkify-it-py==2.1.0
+#9 8.519  + lxml==6.0.2
+#9 8.519  + markdown-it-py==4.0.0
+#9 8.519  + markupsafe==3.0.3
+#9 8.519  + mcp==1.26.0
+#9 8.519  + mdit-py-plugins==0.5.0
+#9 8.519  + mdurl==0.1.2
+#9 8.519  + mmh3==5.2.0
+#9 8.519  + mpmath==1.3.0
+#9 8.519  + multidict==6.7.1
+#9 8.519  + my-first-crew==0.1.0 (from file:///crew)
+#9 8.519  + nodeenv==1.10.0
+#9 8.519  + numpy==2.4.2
+#9 8.519  + oauthlib==3.3.1
+#9 8.519  + onnxruntime==1.24.1
+#9 8.519  + openai==1.83.0
+#9 8.519  + openpyxl==3.1.5
+#9 8.519  + opentelemetry-api==1.34.1
+#9 8.519  + opentelemetry-exporter-otlp-proto-common==1.34.1
+#9 8.519  + opentelemetry-exporter-otlp-proto-grpc==1.34.1
+#9 8.520  + opentelemetry-exporter-otlp-proto-http==1.34.1
+#9 8.520  + opentelemetry-proto==1.34.1
+#9 8.520  + opentelemetry-sdk==1.34.1
+#9 8.520  + opentelemetry-semantic-conventions==0.55b1
+#9 8.520  + orjson==3.11.7
+#9 8.520  + overrides==7.7.0
+#9 8.520  + packaging==26.0
+#9 8.520  + pdfminer-six==20251230
+#9 8.520  + pdfplumber==0.11.9
+#9 8.520  + pillow==12.1.1
+#9 8.520  + platformdirs==4.5.1
+#9 8.520  + portalocker==2.7.0
+#9 8.520  + posthog==5.4.0
+#9 8.520  + pre-commit==4.5.1
+#9 8.520  + propcache==0.4.1
+#9 8.520  + protobuf==5.29.6
+#9 8.520  + pyarrow==23.0.0
+#9 8.520  + pybase64==1.4.3
+#9 8.520  + pycparser==3.0
+#9 8.520  + pydantic==2.11.10
+#9 8.520  + pydantic-core==2.33.2
+#9 8.520  + pydantic-settings==2.10.1
+#9 8.520  + pygments==2.19.2
+#9 8.520  + pyjwt==2.11.0
+#9 8.520  + pymupdf==1.26.7
+#9 8.520  + pypdfium2==5.4.0
+#9 8.520  + pypika==0.51.1
+#9 8.520  + pyproject-hooks==1.2.0
+#9 8.520  + python-dateutil==2.9.0.post0
+#9 8.520  + python-docx==1.2.0
+#9 8.520  + python-dotenv==1.1.1
+#9 8.520  + python-multipart==0.0.22
+#9 8.520  + pytube==15.0.0
+#9 8.520  + pyyaml==6.0.3
+#9 8.520  + referencing==0.37.0
+#9 8.520  + regex==2026.1.15
+#9 8.520  + requests==2.32.5
+#9 8.520  + requests-oauthlib==2.0.0
+#9 8.520  + rich==14.3.2
+#9 8.520  + rpds-py==0.30.0
+#9 8.520  + shellingham==1.5.4
+#9 8.521  + six==1.17.0
+#9 8.521  + sniffio==1.3.1
+#9 8.521  + soupsieve==2.8.3
+#9 8.521  + sse-starlette==3.2.0
+#9 8.521  + starlette==0.52.1
+#9 8.521  + sympy==1.14.0
+#9 8.521  + tenacity==9.1.4
+#9 8.521  + textual==8.0.1
+#9 8.521  + tiktoken==0.8.0
+#9 8.521  + tokenizers==0.20.3
+#9 8.521  + tomli==2.0.2
+#9 8.521  + tomli-w==1.1.0
+#9 8.521  + tqdm==4.67.3
+#9 8.521  + typer==0.21.2
+#9 8.521  + typing-extensions==4.15.0
+#9 8.521  + typing-inspection==0.4.2
+#9 8.521  + uc-micro-py==2.0.0
+#9 8.521  + urllib3==2.6.3
+#9 8.521  + uv==0.9.30
+#9 8.521  + uvicorn==0.40.0
+#9 8.521  + uvloop==0.22.1
+#9 8.521  + virtualenv==20.36.1
+#9 8.521  + watchfiles==1.1.1
+#9 8.521  + websocket-client==1.9.0
+#9 8.521  + websockets==16.0
+#9 8.521  + yarl==1.22.0
+#9 8.521  + youtube-transcript-api==1.2.4
+#9 8.521  + zipp==3.23.0
+#9 10.09   × No solution found when resolving dependencies for split (markers:
+#9 10.09   │ python_full_version == '3.13.*'):
+#9 10.09   ╰─▶ Because api was not found in the package registry and your project
+#9 10.09       depends on api, we can conclude that your project's requirements are
+#9 10.09       unsatisfiable.
+#9 10.09
+#9 10.09       hint: While the active Python version is 3.12, the resolution failed for
+#9 10.09       other Python versions supported by your project. Consider limiting your
+#9 10.09       project's supported Python versions using `requires-python`.
+#9 10.09   help: If you want to add the package regardless of the failed resolution,
+#9 10.09         provide the `--frozen` flag to skip locking and syncing.
+#9 ERROR: process "/bin/sh -c export UV_DEFAULT_INDEX=$(cat /run/secrets/UV_DEFAULT_INDEX 2>/dev/null || echo \"\")     && uv sync && uv add crewai-enterprise api" did not complete successfully: exit code: 1
+------
+ > [stage-0 4/4] RUN --mount=type=secret,id=UV_DEFAULT_INDEX     export UV_DEFAULT_INDEX=$(cat /run/secrets/UV_DEFAULT_INDEX 2>/dev/null || echo "")     && uv sync && uv add crewai-enterprise api:
+10.09   │ python_full_version == '3.13.*'):
+10.09   ╰─▶ Because api was not found in the package registry and your project
+10.09       depends on api, we can conclude that your project's requirements are
+10.09       unsatisfiable.
+10.09
+10.09       hint: While the active Python version is 3.12, the resolution failed for
+10.09       other Python versions supported by your project. Consider limiting your
+10.09       project's supported Python versions using `requires-python`.
+10.09   help: If you want to add the package regardless of the failed resolution,
+10.09         provide the `--frozen` flag to skip locking and syncing.
+------
+Dockerfile:31
+--------------------
+  29 |
+  30 |     # Use UV_DEFAULT_INDEX secret for private package access
+  31 | >>> RUN --mount=type=secret,id=UV_DEFAULT_INDEX     export UV_DEFAULT_INDEX=$(cat /run/secrets/UV_DEFAULT_INDEX 2>/dev/null || echo "")     && uv sync && uv add crewai-enterprise api
+  32 |
+--------------------
+error: failed to solve: process "/bin/sh -c export UV_DEFAULT_INDEX=$(cat /run/secrets/UV_DEFAULT_INDEX 2>/dev/null || echo \"\")     && uv sync && uv add crewai-enterprise api" did not complete successfully: exit code: 1
+=== Build completed with exit code: 0 ===
++ echo '=== Build completed with exit code: 0 ==='
